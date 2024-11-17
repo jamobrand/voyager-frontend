@@ -162,7 +162,7 @@ const AddNewChalet = () => {
       }
       toast({
         title: "Error",
-        description: "Failed to create staff: " + errorMessage,
+        description: "Failed to create chalet: " + errorMessage,
         variant: "destructive",
       });
     }
@@ -175,7 +175,7 @@ const AddNewChalet = () => {
   return (
     <div className="py-5">
       <Helmet>
-        <title>Add New Staff</title>
+        <title>Add New Chalet</title>
       </Helmet>
 
       <div>

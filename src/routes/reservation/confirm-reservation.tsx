@@ -265,7 +265,7 @@ const ConfirmReservation = () => {
 
               <Button
                 type="submit"
-                className="w-full h-14 text-lg relative"
+                className="w-full h-14 text-lg relative bg-[#27534c] hover:bg-[#1c3d38]"
                 disabled={isProcessing}
               >
                 {isProcessing ? (

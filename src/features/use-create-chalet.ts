@@ -47,7 +47,7 @@ export const useCreateChalet = () => {
       queryClient.invalidateQueries({ queryKey: ["chalets"] });
         toast({
         variant: "success",
-        title: "Staff created",
+        title: "Chalet created",
         description: "Chalet created successfully",
       });
       navigate("/admin/chalets");

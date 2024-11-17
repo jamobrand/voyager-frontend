@@ -34,7 +34,7 @@ export function DataTableRowActions<TData>({
             <span className="sr-only">Open menu</span>
           </Button>
         </DropdownMenuTrigger>
-        <DropdownMenuContent align="end" className="w-[180px]">
+        {/* <DropdownMenuContent align="end" className="w-[180px]">
           <DropdownMenuItem
             onClick={() => navigate(`/admin/chalets/edit-chalet/${chalet.id}`)}
             className="flex items-center gap-2"
@@ -42,7 +42,7 @@ export function DataTableRowActions<TData>({
             <Edit size={15} />
             Edit Chalet
           </DropdownMenuItem>
-        </DropdownMenuContent>
+        </DropdownMenuContent> */}
       </DropdownMenu>
     </>
   );

@@ -4,13 +4,15 @@ import {
   Route,
   RouterProvider,
 } from "react-router-dom";
-import BookingPage from "./routes/booking-page";
 import { Loader2 } from "lucide-react";
 import { lazy, Suspense } from "react";
 import SearchResults from "./routes/booking-search-results";
 import ConfirmReservation from "./routes/reservation/confirm-reservation";
 import BookedConfirmation from "./routes/reservation/reserve-confirmation";
 import ChaletDetailPage from "./routes/view-chalet";
+import HomePage from "./routes/homepage";
+import ChaletDetail from "./routes/view-chalet/chalet-detail";
+import BookingPage from "./routes/booking-page";
 
 const Admin = lazy(() => import('./pages/admin'));
 
@@ -22,6 +24,8 @@ const router = createBrowserRouter(
       <Route path="/reservation/:id" element={<ConfirmReservation />} />
       <Route path="/reservation/confirmation" element={<BookedConfirmation />} />
       <Route path="/chalets/:id" element={<ChaletDetailPage />} />
+      <Route path="/chalet-detail" element={<ChaletDetail />} />
+      
       
       <Route path="/admin/*" element={<Admin />} />
     </>

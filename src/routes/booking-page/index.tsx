@@ -94,8 +94,6 @@ export default function BookingPage() {
 
   const { data: allChalets, isLoading } = useGetChalets();
 
-  console.log("allChalets", allChalets);
-
   return (
     <div className="min-h-screen relative">
       {/* Navigation */}
@@ -137,7 +135,7 @@ export default function BookingPage() {
       </nav>
 
       {/* Hero Section with Carousel */}
-      <div className="h-screen relative overflow-hidden">
+      <div className="h-[500px] relative overflow-hidden">
         {/* Carousel */}
         <div 
           className="absolute inset-0 transition-opacity duration-1000"
@@ -151,9 +149,9 @@ export default function BookingPage() {
         <div className="absolute inset-0 bg-black/40" /> {/* Overlay */}
 
         {/* Booking Widget Container */}
-        <div className="absolute bottom-0 left-0 right-0 mb-8">
-          <div className="container mx-auto px-4">
-            <BookingWidget onSearch={handleSearch} loading={loading} />
+        <div className="absolute bottom-0 left-0 right-0">
+          <div className="container mx-auto px-4 mt-10">
+            <BookingWidget />
           </div>
         </div>
       </div>
