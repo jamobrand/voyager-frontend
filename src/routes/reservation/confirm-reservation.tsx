@@ -339,16 +339,28 @@ const ConfirmReservation = () => {
                       KES {parseInt(chalet.price).toLocaleString()} x{" "}
                       {totalNights} nights
                     </span>
-                    <span>KES {totalAmount.toLocaleString()}</span>
+                    <span>KES {Number(totalAmount).toLocaleString("en-US", {
+                    minimumFractionDigits: 2,
+                    maximumFractionDigits: 2,
+                  })}
+                    </span>
                   </div>
                   <div className="flex justify-between">
                     <span className="text-gray-600">Taxes (16%)</span>
-                    <span>KES {taxAmount.toLocaleString()}</span>
+                    <span>KES {Number(taxAmount).toLocaleString("en-US", {
+                    minimumFractionDigits: 2,
+                    maximumFractionDigits: 2,
+                  })}
+                    </span>
                   </div>
                   <Separator />
                   <div className="flex justify-between text-lg font-semibold">
                     <span>Total</span>
-                    <span>KES {finalAmount.toLocaleString()}</span>
+                    <span>KES {Number(finalAmount).toLocaleString("en-US", {
+                    minimumFractionDigits: 2,
+                    maximumFractionDigits: 2,
+                  })}
+                    </span>
                   </div>
                 </div>
 

@@ -177,7 +177,7 @@ const ViewReservationPage = () => {
             </div>
           </div>
           
-          {reservation.status === 'CANCELLED' && (
+          {/* {reservation.status === 'CANCELLED' && (
             <div className="mt-4 p-4 bg-red-50 rounded-lg">
               <p className="font-medium text-red-600">Reservation Cancelled</p>
               {reservation.cancellationReason && (
@@ -191,7 +191,7 @@ const ViewReservationPage = () => {
                 </p>
               )}
             </div>
-          )}
+          )} */}
         </CardContent>
       </Card>
 
@@ -214,7 +214,11 @@ const ViewReservationPage = () => {
               <h3 className="font-semibold text-lg">{reservation.chalet.name}</h3>
               <p className="text-gray-600">Type: {reservation.chalet.chaletType}</p>
               <p className="text-gray-600">Capacity: {reservation.chalet.capacity} persons</p>
-              <p className="text-gray-600">Price per night: KES {Number(reservation.chalet.price).toLocaleString()}</p>
+              <p className="text-gray-600">Price per night: KES {Number(reservation.chalet.price).toLocaleString("en-US", {
+                    minimumFractionDigits: 2,
+                    maximumFractionDigits: 2,
+                  })}
+              </p>
             </div>
           </CardContent>
         </Card>
@@ -304,7 +308,10 @@ const ViewReservationPage = () => {
             <div className="flex justify-between items-center pb-4 border-b">
               <span className="font-medium">Total Amount</span>
               <span className="text-xl font-semibold">
-                KES {Number(reservation.totalCost).toLocaleString()}
+                KES {Number(reservation.totalCost).toLocaleString("en-US", {
+                    minimumFractionDigits: 2,
+                    maximumFractionDigits: 2,
+                  })}
               </span>
             </div>
             {reservation.payments.map((payment) => (

@@ -118,7 +118,10 @@ const ChaletDetailPage = () => {
             <div className="sticky top-24 bg-white rounded-xl border p-6 shadow-sm">
               <div className="flex justify-between items-center mb-4">
                 <span className="text-2xl font-bold">
-                  KES {Number(chalet.price).toLocaleString()}
+                  KES  {Number(chalet.price).toLocaleString("en-US", {
+                    minimumFractionDigits: 2,
+                    maximumFractionDigits: 2,
+                  })}
                 </span>
                 <span className="text-gray-600">per night</span>
               </div>

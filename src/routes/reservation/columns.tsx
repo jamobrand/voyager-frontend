@@ -99,7 +99,10 @@ export const columns: ColumnDef<Reservation>[] = [
       header: ({ column }) => (
         <DataTableColumnHeader column={column} title="Total Cost" />
       ),
-      cell: ({ row }) => `KES ${parseFloat(row.original.totalCost.toString()).toFixed(2)}`, // Formatting total cost
+      cell: ({ row }) => `KES ${Number(row.original.totalCost).toLocaleString("en-US", {
+        minimumFractionDigits: 2,
+        maximumFractionDigits: 2,
+      })}`,
     },
     {
       id: "actions",

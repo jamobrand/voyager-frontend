@@ -160,7 +160,10 @@ const SearchResults = () => {
                     <div className="flex justify-between items-end mt-4">
                       <div>
                         <div className="text-2xl font-semibold">
-                          KES {Number(chalet.price).toLocaleString()}
+                          KES {Number(chalet.price).toLocaleString("en-US", {
+                    minimumFractionDigits: 2,
+                    maximumFractionDigits: 2,
+                  })}
                         </div>
                         <div className="text-sm text-gray-500">per night</div>
                       </div>

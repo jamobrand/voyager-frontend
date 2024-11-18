@@ -180,7 +180,11 @@ const BookedConfirmation = () => {
               <div className="flex justify-between text-gray-600">
                 <span>Total Paid</span>
                 <span className="font-medium">
-                  KES {reservation.totalCost.toLocaleString()}
+                  KES 
+                  {Number(reservation.totalCost).toLocaleString("en-US", {
+                    minimumFractionDigits: 2,
+                    maximumFractionDigits: 2,
+                  })}
                 </span>
               </div>
             </div>
