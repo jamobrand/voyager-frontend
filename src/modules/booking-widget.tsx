@@ -237,7 +237,7 @@ export function BookingWidget() {
                     className="w-full h-12 justify-start transition-all text-sm md:text-base"
                   >
                     <Users className="mr-2 h-4 w-4" />
-                    {guests.adults + guests.children} Guest
+                    {guests.adults + guests.children} Room
                     {guests.adults + guests.children !== 1 ? "s" : ""}
                   </Button>
                 </PopoverTrigger>

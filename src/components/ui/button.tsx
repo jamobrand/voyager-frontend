@@ -15,6 +15,9 @@ const buttonVariants = cva(
             "bg-[#27534c] text-primary-foreground shadow hover:bg-[#1a3733]",
         greatRiftColorOutline:
             "border border-input bg-background shadow-sm hover:bg-[#1a3733]/20 hover:text-accent-foreground",
+            chaletAmenity: "bg-[#B9992F] text-primary-foreground shadow hover:bg-[#B9994F] border-2 border-solid border-primary rounded-lg",
+
+
         destructive:
           "bg-destructive text-destructive-foreground shadow-sm hover:bg-destructive/90",
         outline:

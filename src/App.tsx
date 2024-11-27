@@ -19,7 +19,7 @@ const Admin = lazy(() => import('./pages/admin'));
 const router = createBrowserRouter(
   createRoutesFromElements(
     <>
-      <Route path="/" element={<BookingPage />} />
+      <Route path="/" element={<HomePage />} />
       <Route path="/search" element={<SearchResults />} />
       <Route path="/reservation/:id" element={<ConfirmReservation />} />
       <Route path="/reservation/confirmation" element={<BookedConfirmation />} />

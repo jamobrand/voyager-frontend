@@ -4,63 +4,84 @@ import { Heart, Star, Users, Bath, BedDouble, Medal } from 'lucide-react';
 const chaletsHouses = [
   {
     id: 1,
-    name: 'Furnished 4 bedroom cottage',
-    title: 'Luxury Lakeside Cottage with Panoramic Views',
+    name: 'A15 Kiriiria Chalet',
+    title: 'A15 Kiriiria Chalet',
     host: 'Superhost: James K.',
     href: '#',
     imageSrc: 'https://a0.muscache.com/im/pictures/18ad49ec-466d-4552-b637-c231b6468bf5.jpg?im_w=960',
     imageAlt: "Furnished 4 bedroom cottage - Beautiful Lake Views",
     price: 26000,
-    pricePerNight: 'KES 26,000',
-    rating: 4.97,
-    reviewCount: 128,
-    bathroom: 2,
-    guests: 5,
-    bedrooms: 4,
+    pricePerNight: 'KES 34,500',
+    // rating: 4.97,
+    // reviewCount: 128,
+    // bathroom: 2,
+    guests: 8,
+    bedrooms: 5,
     beds: 6,
     amenities: ['Lake view', 'Wi-Fi', 'Kitchen', 'Free parking'],
     available: 'Nov 20-25',
-    isSuperhost: true,
+    // isSuperhost: true,
   },
   {
     id: 2,
-    name: 'Lucita Farm Pool House',
-    title: 'Serene Pool House with Farm Views',
+    name: 'A25 Savannah Down',
+    title: 'A25 Savannah Down',
     host: 'Martha W.',
     href: '#',
     imageSrc: 'https://a0.muscache.com/im/pictures/miso/Hosting-14794850/original/f9ac8e95-4e61-49cc-b602-5b3e0ece8954.jpeg?im_w=960',
     imageAlt: "Lucita Farm Pool House with stunning views",
     price: 31000,
-    pricePerNight: 'KES 31,000',
-    rating: 4.89,
-    reviewCount: 95,
-    bathroom: 2,
-    guests: 5,
-    bedrooms: 4,
+    pricePerNight: 'KES 26,000',
+    // rating: 4.89,
+    // reviewCount: 95,
+    // bathroom: 2,
+    guests: 6,
+    bedrooms: 3,
     beds: 6,
     amenities: ['Pool', 'Mountain view', 'Wi-Fi', 'Kitchen'],
     available: 'Nov 18-23',
-    isSuperhost: false,
+    // isSuperhost: false,
   },
   {
     id: 3,
-    name: 'Lucita Farm Pool House',
-    title: 'Serene Pool House with Farm Views',
+    name: 'A23 Rainbow Chalet',
+    title: 'A23 Rainbow Chalet',
     host: 'Martha W.',
     href: '#',
-    imageSrc: 'https://a0.muscache.com/im/pictures/miso/Hosting-14794850/original/f9ac8e95-4e61-49cc-b602-5b3e0ece8954.jpeg?im_w=960',
+    imageSrc: 'https://a0.muscache.com/im/pictures/miso/Hosting-619218237987293924/original/2d2cc77f-5d49-42fe-bd1e-e52f28c340be.jpeg?im_w=1200&im_format=avif',
     imageAlt: "Lucita Farm Pool House with stunning views",
     price: 31000,
-    pricePerNight: 'KES 31,000',
-    rating: 4.89,
-    reviewCount: 95,
-    bathroom: 2,
-    guests: 5,
+    pricePerNight: 'KES 38,250',
+    // rating: 4.89,
+    // reviewCount: 95,
+    // bathroom: 2,
+    guests: 10,
+    bedrooms: 5,
+    beds: 6,
+    amenities: ['Pool', 'Mountain view', 'Wi-Fi', 'Kitchen'],
+    available: 'Nov 18-23',
+    // isSuperhost: false,
+  },
+
+  {
+    id: 4,
+    name: 'A13 Rainbow Chalet',
+    title: 'A23 Rainbow Chalet',
+    host: 'Martha W.',
+    href: '#',
+    imageSrc: 'https://a0.muscache.com/im/pictures/miso/Hosting-1146243798571443441/original/d6a11dc7-26bb-4b7a-a4b7-a463322e6d78.jpeg?im_w=1200&im_format=avif',
+    imageAlt: "Lucita Farm Pool House with stunning views",
+    price: 31000,
+    pricePerNight: 'KES 38,250',
+    // rating: 4.89,
+    // reviewCount: 95,
+    // bathroom: 2,
+    guests: 8,
     bedrooms: 4,
     beds: 6,
     amenities: ['Pool', 'Mountain view', 'Wi-Fi', 'Kitchen'],
     available: 'Nov 18-23',
-    isSuperhost: false,
+    // isSuperhost: false,
   },
 ];
 
@@ -75,7 +96,7 @@ const ChaletDisplay = () => {
           </button>
         </div>
 
-        <div className="grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-3 xl:gap-x-8">
+        <div className="grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
           {chaletsHouses.map((chalet) => (
             <div key={chalet.id} className="group">
               <div className="relative">
@@ -86,9 +107,9 @@ const ChaletDisplay = () => {
                     alt={chalet.imageAlt}
                     className="h-full w-full object-cover object-center group-hover:scale-105 transition-transform duration-300"
                   />
-                  <button className="absolute top-4 right-4 p-2 rounded-full bg-white/80 hover:bg-white">
+                  {/* <button className="absolute top-4 right-4 p-2 rounded-full bg-white/80 hover:bg-white">
                     <Heart className="w-5 h-5 text-gray-600" />
-                  </button>
+                  </button> */}
                 </div>
 
                 {/* Content */}
@@ -99,17 +120,17 @@ const ChaletDisplay = () => {
                         {chalet.title}
                       </h3>
                       <div className="flex items-center mt-1">
-                        {chalet.isSuperhost && (
+                        {/* {chalet.isSuperhost && (
                           <div className="flex items-center mr-2">
                             <Medal className="w-4 h-4 text-rose-500 mr-1" />
                             <span className="text-sm font-medium">Superhost</span>
                           </div>
-                        )}
-                        <div className="flex items-center">
+                        )} */}
+                        {/* <div className="flex items-center">
                           <Star className="w-4 h-4 text-rose-500 mr-1" />
                           <span className="text-sm font-medium">{chalet.rating}</span>
                           <span className="text-sm text-gray-500 ml-1">({chalet.reviewCount} reviews)</span>
-                        </div>
+                        </div> */}
                       </div>
                     </div>
                   </div>
@@ -120,8 +141,8 @@ const ChaletDisplay = () => {
                       <span>{chalet.guests} guests</span>
                       <BedDouble className="w-4 h-4 ml-2" />
                       <span>{chalet.bedrooms} bedrooms</span>
-                      <Bath className="w-4 h-4 ml-2" />
-                      <span>{chalet.bathroom} baths</span>
+                      {/* <Bath className="w-4 h-4 ml-2" />
+                      <span>{chalet.bathroom} baths</span> */}
                     </div>
                     <div className="flex flex-wrap gap-2">
                       {chalet.amenities.map((amenity, index) => (

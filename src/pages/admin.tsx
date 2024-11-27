@@ -1,6 +1,7 @@
 import MainLayout from "@/components/common";
 import Chalets from "@/routes/chalets";
-import AddNewChalet from "@/routes/chalets/add-new-chalets";
+import AddChalet from "@/routes/chalets/add-chalet";
+
 import NewChalet from "@/routes/chalets/add-new-chalets/newChalet";
 import Customers from "@/routes/customers";
 import Dashboard from "@/routes/dashboard";
@@ -15,7 +16,7 @@ const Admin = () => {
       <Routes>
         <Route path="dashboard" element={<Dashboard />} />
         <Route path="chalets" element={<Chalets />} />
-        <Route path="chalets/add-new-chalet" element={<AddNewChalet />} />
+        <Route path="chalets/add-new-chalet" element={<AddChalet />} />
         <Route path="chalets/new-chalet" element={<NewChalet />} />
         
         <Route path="reservations" element={<Reservations />} />

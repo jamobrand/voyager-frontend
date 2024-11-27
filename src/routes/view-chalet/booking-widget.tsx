@@ -54,11 +54,6 @@ const BookingWidget = ({ listing }: { listing: Listing }) => {
             <span className="text-2xl font-bold">KES {listing.price.toLocaleString()}</span>
             <span className="text-gray-500"> / night</span>
           </div>
-          <div className="flex items-center gap-1">
-            <Star className="w-4 h-4 text-emerald-500 fill-emerald-500" />
-            <span className="font-medium">{listing.rating}</span>
-            <span className="text-gray-500">({listing.reviewCount} reviews)</span>
-          </div>
         </div>
   
         <div className="space-y-4">
@@ -75,11 +70,11 @@ const BookingWidget = ({ listing }: { listing: Listing }) => {
   
           <Popover>
             <PopoverTrigger asChild>
-              <Button variant="outline" className="w-full justify-between">
+              <Button variant="outline" className="w-full h-12 justify-between">
                 <div className="flex items-center">
-                  <Users className="mr-2 h-4 w-4" />
+                  <Users className="mr-2 h-6 w-4" />
                   <span>
-                    {guests.adults + guests.children} Guest
+                    {guests.adults + guests.children} Room
                     {guests.adults + guests.children !== 1 ? "s" : ""}
                     {guests.infants > 0 ? `, ${guests.infants} infant${guests.infants !== 1 ? "s" : ""}` : ""}
                   </span>
@@ -95,7 +90,7 @@ const BookingWidget = ({ listing }: { listing: Listing }) => {
             </PopoverContent>
           </Popover>
   
-          <Button className="w-full py-3 bg-emerald-500 text-white rounded-lg font-medium hover:bg-emerald-600 transition-colors">
+          <Button className="w-full py-6 bg-emerald-500 text-white text-base rounded-lg font-semibold hover:bg-emerald-600 transition-colors">
             Reserve
           </Button>
   
