@@ -1,5 +1,6 @@
 import React from 'react';
 import { Heart, Star, Users, Bath, BedDouble, Medal } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const chaletsHouses = [
   {
@@ -7,7 +8,7 @@ const chaletsHouses = [
     name: 'A15 Kiriiria Chalet',
     title: 'A15 Kiriiria Chalet',
     host: 'Superhost: James K.',
-    href: '#',
+    href: '/chalet-detail',
     imageSrc: 'https://a0.muscache.com/im/pictures/18ad49ec-466d-4552-b637-c231b6468bf5.jpg?im_w=960',
     imageAlt: "Furnished 4 bedroom cottage - Beautiful Lake Views",
     price: 26000,
@@ -27,7 +28,7 @@ const chaletsHouses = [
     name: 'A25 Savannah Down',
     title: 'A25 Savannah Down',
     host: 'Martha W.',
-    href: '#',
+    href: '/chalet-detail',
     imageSrc: 'https://a0.muscache.com/im/pictures/miso/Hosting-14794850/original/f9ac8e95-4e61-49cc-b602-5b3e0ece8954.jpeg?im_w=960',
     imageAlt: "Lucita Farm Pool House with stunning views",
     price: 31000,
@@ -47,7 +48,7 @@ const chaletsHouses = [
     name: 'A23 Rainbow Chalet',
     title: 'A23 Rainbow Chalet',
     host: 'Martha W.',
-    href: '#',
+    href: '/chalet-detail',
     imageSrc: 'https://a0.muscache.com/im/pictures/miso/Hosting-619218237987293924/original/2d2cc77f-5d49-42fe-bd1e-e52f28c340be.jpeg?im_w=1200&im_format=avif',
     imageAlt: "Lucita Farm Pool House with stunning views",
     price: 31000,
@@ -68,7 +69,7 @@ const chaletsHouses = [
     name: 'A13 Rainbow Chalet',
     title: 'A23 Rainbow Chalet',
     host: 'Martha W.',
-    href: '#',
+    href: '/chalet-detail',
     imageSrc: 'https://a0.muscache.com/im/pictures/miso/Hosting-1146243798571443441/original/d6a11dc7-26bb-4b7a-a4b7-a463322e6d78.jpeg?im_w=1200&im_format=avif',
     imageAlt: "Lucita Farm Pool House with stunning views",
     price: 31000,
@@ -117,7 +118,7 @@ const ChaletDisplay = () => {
                   <div className="flex justify-between items-start">
                     <div>
                       <h3 className="text-lg font-medium text-gray-900">
-                        {chalet.title}
+                       <Link to={chalet.href} className='hover:text-[#27534c] hover:underline'>{chalet.title}</Link> 
                       </h3>
                       <div className="flex items-center mt-1">
                         {/* {chalet.isSuperhost && (
